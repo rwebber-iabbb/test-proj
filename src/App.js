@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <button onClick={() => uploadSells()}>
-          Get All Dungeons and Dragons Spell
+          Get All Dungeons and Dragons Spells
         </button>
       </header>
     </div>
