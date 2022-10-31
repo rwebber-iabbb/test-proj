@@ -20,7 +20,9 @@ version: 0.2
 #build-matrix:
 #build-graph:
 phases:
-  #install:
+  install:
+    runtime-versions:
+      nodejs: 10
 
   #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
   #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
@@ -36,11 +38,6 @@ phases:
   # - command
   build:
     commands:
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-      - export NVM_DIR="$HOME/.nvm"
-      # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-      - . ~/.nvm/nvm.sh
-      - nvm install 16
       - npm install
       - npm build
         # - command
