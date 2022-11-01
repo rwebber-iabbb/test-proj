@@ -10,8 +10,10 @@ echo "running delete-prefix"
 # nvm use --delete-prefix v19.0.0 --silent
 echo "changing Directory"
 cd /var/www/html
-echo "changing Directory"
-# nvm install 16
+echo "setting source"
+source /home/ec2-user/.bash_profile
+echo "running nvm install 16"
+nvm install 16
 echo "changing Directory"
 npm install
 echo "running build"
